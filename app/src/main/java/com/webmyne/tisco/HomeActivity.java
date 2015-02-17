@@ -28,12 +28,12 @@ import java.util.List;
 
 public class HomeActivity extends ActionBarActivity {
     private Toolbar toolbar;
-//    private ListView listHomeProducts;
+    private ListView listHomeProducts;
     private int icons[] = {R.drawable.one, R.drawable.two, R.drawable.three,
             R.drawable.four, R.drawable.five, R.drawable.six,
             R.drawable.seven, R.drawable.eight, R.drawable.nine,
             R.drawable.ten};
-    private String names[] = {"Buffalo & Beaf", "See Food", "Lamb/Mutton", "Chicken & Duck", "Pork & Turkey", "Vegetables & Fruits",
+    private String names[] = {"Buffalo & Beafsdftg fdghgfhfgjhgjghjkjgkj", "See Food", "Lamb/Mutton", "Chicken & Duck", "Pork & Turkey", "Vegetables & Fruits",
             "Dairy Product", "Rabbit & Hen", "Eggs/Ovos", "Beverage"};
     private String sDescription[] = {"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"};
 
@@ -42,7 +42,7 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         
-//        listHomeProducts = (ListView) findViewById(R.id.listHomeProducts);
+        listHomeProducts = (ListView) findViewById(R.id.listHomeProducts);
         fillAndSet();
         
 //        listHomeProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -76,8 +76,8 @@ public class HomeActivity extends ActionBarActivity {
 
         }
         
-//        MyAppAdapter adapter = new MyAppAdapter(products,HomeActivity.this);
-//        listHomeProducts.setAdapter(adapter);
+        MyAppAdapter adapter = new MyAppAdapter(products,HomeActivity.this);
+        listHomeProducts.setAdapter(adapter);
 
     }
 
@@ -117,24 +117,26 @@ public class HomeActivity extends ActionBarActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             View rowView = convertView;
-
+            ViewHolder viewHolder;
             if (rowView == null) {
                 LayoutInflater inflater = getLayoutInflater();
-                rowView = inflater.inflate(R.layout.item_product_home, null);
+                rowView = inflater.inflate(R.layout.item_category, null);
                 // configure view holder
-                ViewHolder viewHolder = new ViewHolder();
+                viewHolder = new ViewHolder();
                 viewHolder.text = (TextView) rowView.findViewById(R.id.txtNameHomeProduct);
                 viewHolder.image = (ImageView) rowView.findViewById(R.id.imgHomeProduct);
                 viewHolder.description = (TextView) rowView.findViewById(R.id.txtDetailHomeProduct);
                 viewHolder.image.setScaleType(ImageView.ScaleType.FIT_XY);
                 rowView.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
             }
 
-            ViewHolder holder = (ViewHolder) rowView.getTag();
+
             TiscoProduct product = apps.get(position);
-            holder.description.setText(product.shortDetail);
-            holder.image.setImageResource(product.imgRes);
-            holder.text.setText(product.name);
+            viewHolder.description.setText(product.shortDetail);
+            viewHolder.image.setImageResource(product.imgRes);
+            viewHolder.text.setText(product.name);
 
             return rowView;
         }
