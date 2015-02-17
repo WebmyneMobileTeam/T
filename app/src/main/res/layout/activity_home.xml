@@ -29,7 +29,9 @@
             </LinearLayout>
 
         <RelativeLayout
-            android:background="@drawable/trans_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -44,7 +46,39 @@
                 app:shadow="false"
                 android:scaleType="centerCrop"
                 android:src="@drawable/another"/>
+            <LinearLayout
+                android:orientation="vertical"
 
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="-20dp"
+                android:layout_toRightOf="@+id/profileImage"
+                android:background="@drawable/trans_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:paddingRight="20dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:text="Very Long Title Very Very Long"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+
+                    android:paddingLeft="40dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="4dp"
+                    android:maxLines="3"
+                    android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
 
             </RelativeLayout>
 
