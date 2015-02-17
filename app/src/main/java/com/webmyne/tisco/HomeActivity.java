@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,8 +27,8 @@ import java.util.List;
 
 
 public class HomeActivity extends ActionBarActivity {
-
-    private ListView listHomeProducts;
+    private Toolbar toolbar;
+//    private ListView listHomeProducts;
     private int icons[] = {R.drawable.one, R.drawable.two, R.drawable.three,
             R.drawable.four, R.drawable.five, R.drawable.six,
             R.drawable.seven, R.drawable.eight, R.drawable.nine,
@@ -41,17 +42,24 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         
-        listHomeProducts = (ListView) findViewById(R.id.listHomeProducts);
+//        listHomeProducts = (ListView) findViewById(R.id.listHomeProducts);
         fillAndSet();
         
-        listHomeProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(HomeActivity.this,DetailActivity.class);
-                startActivity(i);
+//        listHomeProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent i = new Intent(HomeActivity.this,DetailActivity.class);
+//                startActivity(i);
+//
+//            }
+//        });
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            toolbar.setTitle("TiSCO");
+//            toolbar.setLogo(R.drawable.logo);
+            setSupportActionBar(toolbar);
+        }
 
-            }
-        });
     }
     private void fillAndSet() {
 
@@ -68,8 +76,8 @@ public class HomeActivity extends ActionBarActivity {
 
         }
         
-        MyAppAdapter adapter = new MyAppAdapter(products,HomeActivity.this);
-        listHomeProducts.setAdapter(adapter);
+//        MyAppAdapter adapter = new MyAppAdapter(products,HomeActivity.this);
+//        listHomeProducts.setAdapter(adapter);
 
     }
 
