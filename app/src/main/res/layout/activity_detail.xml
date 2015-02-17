@@ -1,48 +1,46 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#fff"
     android:layout_width="match_parent"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-<LinearLayout
-    android:background="#fff"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:scaleType="fitXY"
-        android:tint="#aaffffff"
-        android:src="@drawable/two"
-        android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="match_parent">
 
-    <com.webmyne.tisco.custom_components.CircularImageView
-        android:id="@+id/profileImage"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:border_color="#EEEEEE"
-        app:border_width="4dp"
-        app:shadow="false"
-        android:scaleType="centerCrop"
-        android:src="@drawable/two"
-        />
-    </RelativeLayout>
+        <LinearLayout
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:tint="#bd000000"
+                    android:src="@drawable/bac"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
 
+                <com.webmyne.tisco.custom_components.CircularImageView
+                    android:id="@+id/profileImage"
+                    android:layout_marginTop="56dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:border_color="#EEEEEE"
+                    app:border_width="4dp"
+                    app:shadow="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/another"/>
+
+            </RelativeLayout>
 
 
             <TextView
@@ -53,6 +51,7 @@
                 android:textColor="#494949"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="4dp"
@@ -64,13 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-</LinearLayout>
+        </LinearLayout>
 
         <View
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#494949"/>
+            android:background="#494949" />
+
         <LinearLayout
             android:layout_gravity="center"
             android:gravity="center"
@@ -85,6 +85,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
+
                 <TextView
 
                     android:layout_gravity="left"
@@ -120,14 +121,16 @@
             <ImageView
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/one"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                android:layout_width="56dp"
+                android:layout_height="56dp" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#494949"/>
+            android:background="#494949" />
+
         <LinearLayout
             android:layout_gravity="center"
             android:gravity="center"
@@ -142,6 +145,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
+
                 <TextView
 
                     android:layout_gravity="left"
@@ -160,6 +164,7 @@
                     android:textColor="#494949"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
                     android:textStyle="bold"
                     android:layout_marginTop="4dp"
@@ -174,15 +179,17 @@
 
             <ImageView
                 android:layout_marginLeft="8dp"
-                android:background="@drawable/one"
+                android:background="@drawable/two"
                 android:layout_width="100dp"
                 android:layout_height="100dp" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#494949"/>
+            android:background="#494949" />
+
         <LinearLayout
             android:layout_gravity="center"
             android:gravity="center"
@@ -196,6 +203,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
+
                 <TextView
 
                     android:layout_gravity="left"
@@ -214,6 +222,7 @@
                     android:textColor="#494949"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
                     android:textStyle="bold"
                     android:layout_marginTop="4dp"
@@ -228,15 +237,17 @@
 
             <ImageView
                 android:layout_marginLeft="8dp"
-                android:background="@drawable/one"
+                android:background="@drawable/three"
                 android:layout_width="100dp"
                 android:layout_height="100dp" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#494949"/>
+            android:background="#494949" />
+
         <LinearLayout
             android:layout_gravity="center"
             android:gravity="center"
@@ -251,6 +262,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
+
                 <TextView
 
                     android:layout_gravity="left"
@@ -269,6 +281,7 @@
                     android:textColor="#494949"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
                     android:textStyle="bold"
                     android:layout_marginTop="4dp"
@@ -284,7 +297,7 @@
             <ImageView
 
                 android:layout_marginLeft="8dp"
-                android:background="@drawable/one"
+                android:background="@drawable/four"
                 android:layout_width="100dp"
                 android:layout_height="100dp" />
 
